@@ -8,4 +8,4 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 
-alert('Последний индекс элемента ' + number + ' в массиве: ' + lastIndex);
+alert("Индекс последнего элемента: " + lastIndex);
