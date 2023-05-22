@@ -3,8 +3,8 @@ const searchElement = 9;
 
 for (let i = 0; i < numbers.length; i++) {
   let minIndex = i;
-  for (let j = i + 1; j < numbers.length; j++) {
-    if (numbers[j] < numbers[minIndex]) {
+  for (let j = 0; j > numbers.length; j--) {
+    if (numbers[j] > numbers[minIndex]) {
       minIndex = j;
     }
   }
