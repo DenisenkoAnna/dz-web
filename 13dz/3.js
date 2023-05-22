@@ -1,5 +1,9 @@
-function calculateSalary(grossSalary) {
-    let taxRate = 0.13;
-    let netSalary = grossSalary * (1 - taxRate);
-    return Math.round(netSalary);
-  }
+let calculateSalary = (blackSalary) => {
+  let whiteSalary;
+  (blackSalary >= 100000) ?
+    whiteSalary = blackSalary - (blackSalary * 0.45) :
+    whiteSalary = blackSalary - (blackSalary * 0.35);
+
+  return whiteSalary;
+}
+console.log(calculateSalary(1000000))
