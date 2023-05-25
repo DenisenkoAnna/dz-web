@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" title="theme" href="#">
+
+	<title>Каталог</title>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+			<h4>fleurir</h4>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Главная</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Каталог</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-cart">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
+						<div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content">
+									<div class="modal-header bg-secondary text-white">
+										<h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">закрыть</button>
+										<button type="button" class="btn btn-primary">сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+					</li>
+
+					<li class="nav-item type">
+						<button type="button" class="btn btn-light" onclick="decreaseFontSize()">-</button>
+						<button type="button" class="btn btn-light" onclick="resetFontSize()">сброс</button>
+						<button type="button" class="btn btn-light" onclick="increaseFontSize()">+</button>
+					</li>
+
+					<li class="nav-item theme">
+						<button type="button" class="btn btn-light change-theme" style="display: none;"
+							data-theme="light">Тема</button>
+						<button type="button" class="btn btn-dark change-theme" data-theme="dark">Тема</button>
+					</li>
+
+					<li class="nav-item type">
+						<button type="button" id="font-button-sans-serif" class="btn btn-light" onclick="toggleText()">С
+							засечками</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 mb-3">
+					<div class="product-card">
+						<div class="product-thumb">
+							<a href="#"><img src="img/rose.jpg" alt=""></a>
+						</div>
+						<div class="product-details">
+							<h4><a href="#">роза</a></h4>
+							<p>алый букет</p>
+							<div class="product-bottom-details d-flex justify-content-between">
+								<div class="product-price">
+									<small>500 ₽</small> 250 ₽
+								</div>
+								<div class="product-links">
+									<a href="#"><i class="fas fa-shopping-cart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6 mb-3">
+					<div class="product-card">
+						<div class="product-thumb">
+							<a href="#"><img src="img/pion.jpg" alt=""></a>
+						</div>
+						<div class="product-details">
+							<h4><a href="#">пион</a></h4>
+							<p>фиолетовый</p>
+							<div class="product-bottom-details d-flex justify-content-between">
+								<div class="product-price">
+									250.00 ₽
+								</div>
+								<div class="product-links">
+									<a href="#"><i class="fas fa-shopping-cart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6 mb-3">
+					<div class="product-card">
+						<div class="product-thumb">
+							<a href="#"><img src="img/btfl.jpg" alt=""></a>
+						</div>
+						<div class="product-details">
+							<h4><a href="#">бабочки</a></h4>
+							<p>цветы в форме бабочек</p>
+							<div class="product-bottom-details d-flex justify-content-between">
+								<div class="product-price">
+									<small>350 ₽</small> 250 ₽
+								</div>
+								<div class="product-links">
+									<a href="#"><i class="fas fa-shopping-cart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6 mb-3">
+					<div class="product-card">
+						<div class="product-thumb">
+							<a href="#"><img src="img/cld.jpg" alt=""></a>
+						</div>
+						<div class="product-details">
+							<h4><a href="#">цветочная закладка</a></h4>
+							<p>закладка для книг</p>
+							<div class="product-bottom-details d-flex justify-content-between">
+								<div class="product-price">
+									<small>350 ₽</small> 250 ₽
+								</div>
+								<div class="product-links">
+									<a href="#"><i class="fas fa-shopping-cart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-6">
+						<h4>Информация</h4>
+						<ul class="list-unstyled">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О магазине</a></li>
+							<li><a href="#">Оплата и доставка</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-3 col-6">
+						<h4>Время работы</h4>
+						<ul class="list-unstyled">
+							<li>Ростов-на-Дону, проспект М.Нагибина, 5</li>
+							<li>пн-пт: 8:00 - 20:00</li>
+						</ul>
+					</div>
+
+					<div class="col-md-3 col-6">
+						<h4>Контакты</h4>
+						<ul class="list-unstyled">
+							<li><a href="tel:9515156182">+7 (918) 222-75-39</a></li>
+							<li><a href="Email:antomonova97@gmail.com">Email: antomonova97@gmail.com</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-3 col-6">
+						<h4>Мы в сети</h4>
+						<div class="footer-icons">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+</html>
